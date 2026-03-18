@@ -1,0 +1,6 @@
+# 编译输出
+Build_out/*
+tools/*
+
+# IDE配置
+.vscode/
