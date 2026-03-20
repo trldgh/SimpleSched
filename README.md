@@ -67,6 +67,7 @@ scheduler_run()
 
 ## 初始化调度器
 在 main.c 中：
+```
 #include "sched.h"
 
 int main(void)
@@ -76,9 +77,11 @@ int main(void)
 
     while (1);
 }
+```
 
 ## 添加初始化任务
 用于系统初始化（GPIO / UART / 外设等）
+```
 static uint32_t board_init(void)
 {
     // 硬件初始化代码
@@ -86,14 +89,17 @@ static uint32_t board_init(void)
 }
 
 REGISTER_INIT_TASK(board_init, INIT_PRIO_DRIVER, 1);
+```
 
 ## 添加周期任务
+```
 static void led_task(void)
 {
     // 周期执行代码
 }
 
 REGISTER_PERIODIC_TASK(led_task, TASK_PERIOD_100MS, 1);
+````
 ## 编译
 直接运行build.bat
 ## 烧录
