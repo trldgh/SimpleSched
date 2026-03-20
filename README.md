@@ -64,7 +64,8 @@ scheduler_run()
 
 # 4、使用方法
 以STM32F103C8T6为例。目前项目中启动文件和链接文件都基于此芯片。
-初始化调度器
+
+## 初始化调度器
 在 main.c 中：
 #include "sched.h"
 
@@ -76,7 +77,7 @@ int main(void)
     while (1);
 }
 
-添加初始化任务
+## 添加初始化任务
 用于系统初始化（GPIO / UART / 外设等）
 static uint32_t board_init(void)
 {
@@ -86,16 +87,16 @@ static uint32_t board_init(void)
 
 REGISTER_INIT_TASK(board_init, INIT_PRIO_DRIVER, 1);
 
-添加周期任务
+## 添加周期任务
 static void led_task(void)
 {
     // 周期执行代码
 }
 
 REGISTER_PERIODIC_TASK(led_task, TASK_PERIOD_100MS, 1);
-编译
+## 编译
 直接运行build.bat
-烧录
+## 烧录
 直接运行falsh.bat
 
 
