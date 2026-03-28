@@ -132,7 +132,7 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
-/* 声明你自己的函数 */
+/* liutr:声明自己的函数 */
 void sched_tick_handler(void);
 
 void SysTick_Handler(void)

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(SimpleSched)
 
-# 【关键】添加这一行，让CMake生成compile_commands.json
+# 让CMake生成compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 屏蔽错误选项

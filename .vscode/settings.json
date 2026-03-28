@@ -1,0 +1,11 @@
+{
+    "cmake.buildDirectory": "${workspaceFolder}/Build_out",
+    "cmake.sourceDirectory": "${workspaceFolder}/Application",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/Build_out/compile_commands.json",
+
+    "files.exclude": {
+        "Build_out/**": true
+    },
+    "C_Cpp.intelliSenseEngine": "default",
+    "cmake.configureOnOpen": false
+}
